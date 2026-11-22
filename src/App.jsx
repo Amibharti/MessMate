@@ -76,6 +76,12 @@ function App() {
   }
 
 
+  function cancelEdit() {
+    setEditingDate(null)
+    setActivePage('calendar')
+  }
+
+
   return (
     <div>
 
@@ -84,7 +90,7 @@ function App() {
         setActivePage={setActivePage}
       />
 
-      <h1>MessMate</h1>
+      
 
 
       {activePage === 'home' && (
@@ -103,6 +109,7 @@ function App() {
           saveEntry={saveEntry}
           editingDate={editingDate}
           setEditingDate={setEditingDate}
+          cancelEdit={cancelEdit}
         />
       )}
 
